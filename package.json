@@ -8,20 +8,35 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "synth:local": "cdk synth --no-staging > template.yaml",
+    "synth": "cdk synth",
+    "invoke:local": "sam local invoke",
+    "build:local": "npm-run-all build synth:local",
+    "format": "prettier --write \"./**/*.ts\""
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.27.0",
+    "@aws-cdk/aws-ec2": "^1.32.2",
+    "@aws-cdk/aws-redshift": "^1.32.2",
     "@types/jest": "^24.0.22",
     "@types/node": "10.17.5",
-    "jest": "^24.9.0",
-    "ts-jest": "^24.1.0",
     "aws-cdk": "1.27.0",
+    "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "ts-jest": "^24.1.0",
     "ts-node": "^8.1.0",
     "typescript": "~3.7.2"
   },
   "dependencies": {
-    "@aws-cdk/core": "1.27.0",
+    "@aws-cdk/aws-lambda": "^1.32.2",
+    "@aws-cdk/aws-s3": "^1.32.2",
+    "@aws-cdk/core": "^1.32.2",
+    "@types/aws-lambda": "^8.10.48",
+    "@types/pg": "^7.14.3",
+    "aws-lambda": "^1.0.5",
+    "pg": "^8.0.2",
     "source-map-support": "^0.5.16"
   }
 }
