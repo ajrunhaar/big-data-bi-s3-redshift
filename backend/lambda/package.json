@@ -1,31 +1,20 @@
 {
-  "name": "big-data-bi-s3-redshift",
-  "version": "0.1.0",
-  "bin": {
-    "big-data-bi-s3-redshift": "bin/big-data-bi-s3-redshift.js"
-  },
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk",
-    "synth:local": "cdk synth --no-staging > template.yaml",
-    "synth": "cdk synth",
-    "invoke:local": "sam local invoke",
-    "build:local": "npm-run-all build synth:local",
-    "deploy": "cdk deploy --profile ShellStackAnton",
-    "destroy": "cdk destroy --profile ShellStackAnton",
-    "format": "prettier --write \"./**/*.ts\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@aws-cdk/assert": "1.27.0",
     "@aws-cdk/aws-ec2": "^1.36.1",
     "@aws-cdk/aws-redshift": "^1.36.1",
-    "@types/glob": "^7.1.1",
     "@types/jest": "^24.0.22",
     "@types/node": "10.17.5",
     "aws-cdk": "^1.33.0",
-    "glob": "^7.1.6",
     "jest": "^24.9.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.5",
@@ -52,6 +41,7 @@
     "csvtojson": "^2.0.10",
     "date-and-time": "^0.13.1",
     "date-fns": "^2.14.0",
+    "fs": "0.0.1-security",
     "pg": "^8.0.3",
     "source-map-support": "^0.5.19"
   }

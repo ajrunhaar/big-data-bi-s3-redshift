@@ -1,0 +1,7 @@
+.serverless
+.webpack
+cdk.out
+frontend/dist
+frontend/.cache
+shared/src/graphql
+.vscode
